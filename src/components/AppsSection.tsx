@@ -60,9 +60,12 @@ const AppsSection = () => {
                   <Button 
                     size="lg" 
                     className="group bg-gradient-to-r from-primary to-accent hover:shadow-[0_0_30px_hsl(270_80%_60%/0.5)] transition-all duration-500"
+                    asChild
                   >
-                    <Download className="mr-2 w-5 h-5 group-hover:animate-bounce" />
-                    Download APK
+                    <a href="/Astrology.apk" download="ProAiAstrologer.apk">
+                      <Download className="mr-2 w-5 h-5 group-hover:animate-bounce" />
+                      Download APK
+                    </a>
                   </Button>
 
                   <p className="text-xs text-muted-foreground mt-3">
