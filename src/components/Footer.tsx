@@ -21,7 +21,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-foreground">Quick Links</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#apps" className="hover:text-accent transition-colors">Our Apps</a>
+                <a href="/apps" className="hover:text-accent transition-colors">Our Apps</a>
               </li>
               <li>
                 <a href="https://instagram.com/prothonai" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">

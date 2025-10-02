@@ -40,17 +40,23 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             className="group bg-gradient-to-r from-primary to-accent hover:shadow-[0_0_40px_hsl(270_80%_60%/0.5)] transition-all duration-500 text-lg px-8"
+            asChild
           >
-            Explore Our Apps
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <a href="/apps">
+              Explore Our Apps
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
           
           <Button 
             size="lg" 
             variant="outline" 
             className="border-primary/50 hover:bg-primary/10 hover:border-primary transition-all duration-300 text-lg px-8"
+            asChild
           >
-            Join Community
+            <a href="#connect">
+              Join Community
+            </a>
           </Button>
         </div>
 
