@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 7%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 189 100% 50%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 189 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 189 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 10% 7%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 189 100% 50%;
+    --sidebar-primary-foreground: 240 10% 3.9%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 5% 20%;
+    --sidebar-ring: 189 100% 50%;
+
+    /* Gaming theme custom variables */
+    --neon-cyan: 189 100% 50%;
+    --neon-blue: 217 91% 60%;
+    --danger-red: 0 84% 60%;
+    --success-green: 142 76% 36%;
+    --warning-yellow: 48 96% 53%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(189 100% 50%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(240 10% 3.9%) 0%, hsl(240 10% 7%) 100%);
+    
+    /* Shadows & Glows */
+    --glow-cyan: 0 0 20px hsl(189 100% 50% / 0.5);
+    --glow-blue: 0 0 20px hsl(217 91% 60% / 0.5);
+    --shadow-elevated: 0 10px 40px hsl(0 0% 0% / 0.5);
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
