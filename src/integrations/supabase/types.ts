@@ -14,7 +14,89 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      matches: {
+        Row: {
+          code: string
+          created_at: string | null
+          guest_id: string | null
+          guest_score: number | null
+          host_id: string
+          host_score: number | null
+          id: string
+          status: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          code: string
+          created_at?: string | null
+          guest_id?: string | null
+          guest_score?: number | null
+          host_id: string
+          host_score?: number | null
+          id?: string
+          status?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          code?: string
+          created_at?: string | null
+          guest_id?: string | null
+          guest_score?: number | null
+          host_id?: string
+          host_score?: number | null
+          id?: string
+          status?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      player_positions: {
+        Row: {
+          health: number | null
+          id: string
+          is_shooting: boolean | null
+          match_id: string
+          player_id: string
+          position_x: number | null
+          position_y: number | null
+          position_z: number | null
+          rotation_y: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          health?: number | null
+          id?: string
+          is_shooting?: boolean | null
+          match_id: string
+          player_id: string
+          position_x?: number | null
+          position_y?: number | null
+          position_z?: number | null
+          rotation_y?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          health?: number | null
+          id?: string
+          is_shooting?: boolean | null
+          match_id?: string
+          player_id?: string
+          position_x?: number | null
+          position_y?: number | null
+          position_z?: number | null
+          rotation_y?: number | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "player_positions_match_id_fkey"
+            columns: ["match_id"]
+            isOneToOne: false
+            referencedRelation: "matches"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
